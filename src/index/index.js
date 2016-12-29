@@ -1,7 +1,14 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-ReactDom.render(
-  <h1>hello world</h1>,
-  document.getElementById('example')
-);
+
+var Greet = React.createClass({
+   render() {
+   	  return <h1> {this.props.name}</h1>
+   }
+})
+
+ ReactDom.render(
+    <Greet name='kinsliy'/>,
+    document.getElementById('example')
+ )
